@@ -1,21 +1,21 @@
-import React from 'react';
+import React from 'react'
 import {
   View,
   Platform,
   TextInput,
   StyleSheet,
   TextInputProps,
-} from 'react-native';
+} from 'react-native'
 
 const Input = (props: TextInputProps) => {
   return (
     <View style={styles.container}>
       <TextInput style={styles.input} {...props} />
     </View>
-  );
-};
+  )
+}
 
-export default Input;
+export default Input
 
 const styles = StyleSheet.create({
   container: {
@@ -30,4 +30,4 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
   },
-});
+})
