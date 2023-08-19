@@ -50,7 +50,7 @@ jobs:
 
             - name: Upload to App Distribution
               run: |
-                firebase login:ci
+                firebase login:ci --interactive
                 firebase appdistribution:distribute android/app/build/outputs/apk/release/app-release.apk \
                 --app 1:440709677408:android:009487b34f0d2fff511e05 \
                 --release-notes "The second test to upload to App Distribution" \
