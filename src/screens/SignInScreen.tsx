@@ -1,5 +1,12 @@
 import React from 'react';
-import {Dimensions, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {
+  Text,
+  View,
+  StatusBar,
+  Dimensions,
+  StyleSheet,
+  SafeAreaView,
+} from 'react-native';
 
 import Button from '../components/Button';
 import Input from '../components/Input';
@@ -9,6 +16,7 @@ const SignInScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar backgroundColor={'transparent'} barStyle={'dark-content'} />
       <Text style={styles.title}>React Native CI-CD</Text>
       <View style={styles.inputWrapper}>
         <Input placeholder="Email" />
