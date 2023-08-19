@@ -9,41 +9,44 @@ jobs:
         name: Build Android
         runs-on: ubuntu-latest
         steps:
-            - name: Clone Repository
-              uses: actions/checkout@v3
+            # - name: Clone Repository
+            #   uses: actions/checkout@v3
 
-            - name: Setup Java 11
-              uses: actions/setup-java@v3
-              with:
-                java-version: '11'
-                distribution: 'temurin'
-                architecture: x64
-                cache: gradle
+            # - name: Setup Java 11
+            #   uses: actions/setup-java@v3
+            #   with:
+            #     java-version: '11'
+            #     distribution: 'temurin'
+            #     architecture: x64
+            #     cache: gradle
 
-            - name: Setup Android SDK
-              uses: android-actions/setup-android@v2
+            # - name: Setup Android SDK
+            #   uses: android-actions/setup-android@v2
 
-            - name: Validate Gradle
-              uses: gradle/wrapper-validation-action@v1
+            # - name: Validate Gradle
+            #   uses: gradle/wrapper-validation-action@v1
 
-            - name: Install NodeJS
-              uses: actions/setup-node@v3
-              with:
-                node-version: '18'
+            # - name: Install NodeJS
+            #   uses: actions/setup-node@v3
+            #   with:
+            #     node-version: '18'
             
-            - name: Install Packages
-              run: yarn
+            # - name: Install Packages
+            #   run: yarn
 
-            - name: The build process has started.
-              run: |
-                cd android
-                ./gradlew assembleRelease
+            # - name: The build process has started.
+            #   run: |
+            #     cd android
+            #     ./gradlew assembleRelease
 
-            - name: Upload build
-              uses: actions/upload-artifact@v3
-              with:
-                name: Android Release APK
-                path: android/app/build/outputs/apk/release/app-release.apk
+            # - name: Upload build
+            #   uses: actions/upload-artifact@v3
+            #   with:
+            #     name: Android Release APK
+            #     path: android/app/build/outputs/apk/release/app-release.apk
+
+            - name: Install Firebase CLI
+              run: curl -sL https://firebase.tools | bash
 
             - name: Upload to App Distribution
               run: |
