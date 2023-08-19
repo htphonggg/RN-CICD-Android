@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   Text,
   View,
@@ -6,13 +6,13 @@ import {
   Dimensions,
   StyleSheet,
   SafeAreaView,
-} from 'react-native';
+} from 'react-native'
 
-import Button from '../components/Button';
-import Input from '../components/Input';
+import Button from '../components/Button'
+import Input from '../components/Input'
 
 const SignInScreen = () => {
-  const styles = SignInStyles();
+  const styles = SignInStyles()
 
   return (
     <SafeAreaView style={styles.container}>
@@ -24,13 +24,13 @@ const SignInScreen = () => {
       </View>
       <Button />
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default SignInScreen;
+export default SignInScreen
 
 const SignInStyles = () => {
-  const {height} = Dimensions.get('window');
+  const { height } = Dimensions.get('window')
   return StyleSheet.create({
     container: {
       height,
@@ -48,5 +48,5 @@ const SignInStyles = () => {
       paddingHorizontal: 24,
       marginVertical: '10%',
     },
-  });
-};
+  })
+}
