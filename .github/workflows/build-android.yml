@@ -53,8 +53,8 @@ jobs:
                 firebase appdistribution:distribute android/app/build/outputs/apk/release/app-release.apk \
                 --token 1//0eP_qyJM1cj-ICgYIARAAGA4SNwF-L9IrOu7pcgU4gNeXc3kxRkxzmeVKZASunadbC8iMospuSZYzEZy7pLMwP_MdMGgzggtxKmU \
                 --app 1:440709677408:android:009487b34f0d2fff511e05 \
-                --release-notes-file "./qateam/release-note.txt" \
-                --testers-file "./qateam/testers.txt"
+                --release-notes-file "qateam/release-note.txt" \
+                --testers-file "qateam/testers.txt"
             
            
                 
